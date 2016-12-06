@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>야! 어디야 회원목록</title>
+    </head>
+    <body>
+        <h1>야! 어디야 서비스 고객 리스트</h1>
+        <a href = "/insert">회원가입</a>
+        <hr />
+        <table width="100%" border="1">
+            <tr>
+                <th>삭제</th>
+                <th>수정</th>
+                <th>Username</th>
+                <th>ID</th>
+                <th>PASSWORD</th>
+            </tr>
+            <% data.forEach(function (item, index){ %></%>
+                <tr>
+                    <td><a href = "/delete">DB 삭제</a></td>
+                    <td><a href = "/edit">DB 수정</a></td>
+                    <td><%= item.Username %></%></td>
+                    <td><%= item.Id %></%></td>
+                    <td><%= item.Password %></%></td>
+                </tr>
+            <% }); %></%>
+        </table>
+    </body>
+</html>
